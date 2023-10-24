@@ -44,6 +44,12 @@ hexo clean #清除缓存文件
 
 hexo g -d #hexo生成静态文件并自动部署，后面两个命令作用相同 hexo generate --deploy    hexo deploy --generate
 hexo s # 启动服务 hexo server -p 5000 指定端口
+
+#内置了start.sh文件，用来清除、编译并重新启动服务
+#给start.sh文件可执行权限
+chmod 755 start.sh
+# 后续直接执行即可
+./start.sh
 ````
 
 ## 服务器

@@ -8,4 +8,4 @@ fi
 hexo clean && hexo g -d 
 
 nohup hexo s > hexo.log 2>&1 &
-tail -f hexo.log
+#tail -f hexo.log

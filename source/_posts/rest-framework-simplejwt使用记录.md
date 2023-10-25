@@ -10,7 +10,7 @@ categories:
 
 ## 0、基本说明
 
-[rest_framework_simplejwt](https://github.com/jazzband/djangorestframework-simplejwt) 是用于[**Django REST**](https://www.django-rest-framework.org/)的认证组件，用来进行用户的身份认证。
+[**rest_framework_simplejwt**](https://github.com/jazzband/djangorestframework-simplejwt) 是用于[**Django REST**](https://www.django-rest-framework.org/)的认证组件，用来进行用户的身份认证。
 
 ## 1、安装配置(使用默认配置)
 
@@ -83,7 +83,7 @@ SIMPLE_JWT = {
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
-  	TokenVerifyView
+   TokenVerifyView
 )
 
 urlpatterns = [
@@ -106,7 +106,7 @@ curl --location --request POST 'http://127.0.0.1:8888/login/' \
     "password": "密码"
 }'
 响应信息
-	{
+ {
     "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3NTg1NDEyMiwiaWF0IjoxNjc1NDIyMTIyLCJqdGkiOiI0MDNiYTQ2N2VkNGU0ODllYmI2MWNlMjU5OTVkMTM3NiIsInVzZXJfaWQiOjF9.4tmyp53OSdmeo87KP-rNNlqUInFzbVSd7Dug3m3tu-A",
     "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1NjgxMzIyLCJpYXQiOjE2NzU0MjIxMjIsImp0aSI6ImQwODRkZjlkMzMxZjQ4NjNhZWQyM2I1NjkwYjgxNmY2IiwidXNlcl9pZCI6MX0.mvRWtThlAU8-Kg79Dv2Q1vYbB10M7vz11vJoliLiOKE"
 }
@@ -188,8 +188,8 @@ from rest_framework.views import APIView
 class TestApi(APIView):
 
     def get(self, request, *args, **kwargs):
-      	# 当前请求的用户，是user表中的一个对象
-      	print(request.user)
+       # 当前请求的用户，是user表中的一个对象
+       print(request.user)
         # 获取用户的id
         print(request.user.pk)
         # token中的信息，包含自定义的信息
@@ -197,4 +197,3 @@ class TestApi(APIView):
         return Response({"msg": "test"})
 
 ```
-

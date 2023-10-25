@@ -25,7 +25,7 @@ navbar:
         key: "关于",
         link: "/about/",
         icon: "iconfont icon-user-fill",
-        name: "联系我",
+        name: "关于我",
       }
 
 web_analytics: # 网页访问统计
